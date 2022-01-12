@@ -128,6 +128,13 @@
         margin-top: 25px;
 
     }
+    .carousel{
+        .slick-dots{
+            button{
+                height: 15px;
+            }
+        }
+    }
     
 }
 @media (max-width: 575px) {
@@ -175,7 +182,7 @@
         font-size: 12px;
         &_main{
             margin-top: 45px;
-            width: 185px;
+            width: 200px;
             font-size: 12px;
         }
         &_submit{
@@ -220,6 +227,13 @@
         &_submit{
             height: 40px;
             font-size: 13px;
+        }
+    }
+    .carousel{
+        .slick-dots{
+            button{
+                height: 15px;
+            }
         }
     }
 }
