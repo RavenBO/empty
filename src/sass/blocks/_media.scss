@@ -44,6 +44,12 @@
             width: 220px;
         }
     }
+    .footer {
+        &__info {
+            width: 350px;
+            height: 260px;            
+        }
+    }
 }
 @media ( max-width:767px) {
     .container {
@@ -153,7 +159,24 @@
             margin-top: 15px;
         }
     }
-    
+    .footer {
+        &__info {
+            padding: 0;
+            width: 300px;
+            height: 185px;
+        }
+        &__adr {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        &__phone{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        &__social{
+            margin-top: 20px;
+        }
+    }
 }
 @media (max-width: 575px) {
     .container{
@@ -305,5 +328,18 @@
     }
     .title{
         font-size: 20px;
+    }
+    .footer {
+        &__info {
+            width: 270px;
+            height: 165px;
+        }
+        &__adr {
+            font-size: 16px;
+        }
+        &__social-item {
+            height: 45px;
+            width: 45px;
+        }
     }
 }
