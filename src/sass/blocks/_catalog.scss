@@ -42,10 +42,12 @@
         
     }
     &__content{
-        margin-top: 57px;
+        margin: 0 auto;
+        margin-top: 57px;        
         display: none;
         flex-wrap: wrap;
         transition: 1s all;
+        justify-content: center;
         &_active{
             display: flex;
         }
