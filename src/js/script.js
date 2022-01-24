@@ -21,20 +21,7 @@ $(document).ready(function(){
           .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
       });
 
-    /* $('.catalog-item__link').each(function(i) {
-        $(this).on('click', function(e){
-            e.preventDefault();
-            $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-            $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-        })
-    })
-    $('.catalog-item__back').each(function(i) {
-        $(this).on('click', function(e){
-            e.preventDefault();
-            $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-            $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-        })
-    }) */
+   
     function toggleSlide(item) {
         $(item).each(function(i) {
             $(this).on('click', function(e){
@@ -52,7 +39,7 @@ $(document).ready(function(){
         $('.overlay, #consultation').fadeIn('slow');
     });
     $('.modal__close').on('click', function(){
-        $('.overlay, #consultatio, #order, #thanks').fadeOut('slow');
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
     });
     $('.button_buy').each(function(i){
         $(this).on('click', function(){
@@ -60,5 +47,35 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('slow');
         });
     });
-  });
+    function valideForm(form){
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required:  "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите не меньше {0}-х символов!")
+                },
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                  required: "Пожалуйста, введите свою почту",
+                  email: "Електронная почта вводится в формате: name@domain.com"
+                }
+              }
+        })
+    };
+    valideForm('#consultation-form');
+    valideForm('#consultation form');
+    valideForm('#order form');
+
+});
   
