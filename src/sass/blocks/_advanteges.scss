@@ -38,4 +38,12 @@
             color: #FF0000;
         }
     }
+    &__icon {
+        &_animated {
+            animation: heartbeat 1s ease 3;
+            &:hover {
+                animation-iteration-count: infinite;
+            }
+        }
+    }
 }
