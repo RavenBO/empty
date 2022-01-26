@@ -40,7 +40,7 @@
     }
     &__icon {
         &_animated {
-            animation: heartbeat 1s ease 3;
+            animation: heartbeat 1s ease 10;
             &:hover {
                 animation-iteration-count: infinite;
             }
